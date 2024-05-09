@@ -3,11 +3,66 @@
     padding: 0 0;
     box-sizing: border-box;
 }
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: "industry", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: "industry", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.4rem;
+    font-family: "industry", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* oder block, abhängig von Ihren Bedürfnissen */
+  }
+  
+  .image-container img {
+    display: block; /* Entfernt den Standardabstand unter dem Bild */
+    width: 100%; /* Stellen Sie sicher, dass das Bild den Container ausfüllt */
+    height: auto;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 100px; /* Abstand von oben, anpassbar */
+    left: 100px; /* Abstand von links, anpassbar */
+    width: 300px; /* Breite des Logos */
+    height: auto; /* Erhalt des Seitenverhältnisses */
+  }
+
+
 body {
-    background-color: rgb(58, 58, 145);
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #anzeige {
