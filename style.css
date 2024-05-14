@@ -9,9 +9,6 @@ img {
     max-width: 100%;
 }
 
-.logo {
-    max-width: 300px;
-}
 
 ul {
     list-style-type: none;
@@ -26,7 +23,7 @@ line-height: normal;
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
     font-family: "industry", sans-serif;
     font-weight: 800;
     font-style: italic;
@@ -50,7 +47,15 @@ p {
     margin-bottom: 1rem; 
 }
 
+.small {
+  font-size: 1rem;
+    font-family: "industry", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 1rem; 
+}
 
+/*HEADER*/
 .image-container {
     position: relative;
     display: inline-block; /* oder block, abhängig von Ihren Bedürfnissen */
@@ -60,30 +65,33 @@ p {
     display: block; /* Entfernt den Standardabstand unter dem Bild */
     width: 100%; /* Stellen Sie sicher, dass das Bild den Container ausfüllt */
     height: auto;
-    max-height: 700px;
   }
 
   .overlay-content {
     position: absolute;
-    top: 300px;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+    width: 100%;  
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
     justify-content: center;
-    color: white; /* Farbe des Textes, abhängig vom Bildhintergrund */
     text-align: center;
-    padding: 150px; /* Abstand zum Rand des Containers */
-    box-sizing: border-box;
+    color: white;
+    padding: 250px
   }
   
   
   .logo {
-    position: absolute;
-    top: 100px; /* Abstand von oben, anpassbar */
-    left: 100px; /* Abstand von links, anpassbar */
-    width: 300px; /* Breite des Logos */
-    height: auto; /* Erhalt des Seitenverhältnisses */
+    height: auto;  
+    margin-bottom: 100px; 
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .overlay-content p {
+    margin-bottom: 30px;
   }
 
   .green-button {
@@ -101,6 +109,12 @@ p {
     font-family: "industry", sans-serif;
     font-weight: 800;
     font-style: normal;
+    transition: padding 0.3s ease;
+  }
+
+  .green-button:hover {
+    background-color: #31f27b;
+    padding: 10px 40px;
   }
 
 
@@ -111,48 +125,129 @@ body {
 
 }
 
-.text-bild {
-    margin: 0px 150px;
-    display: flex;
-    flex-direction: column;
 
-}
-
+/*FEATURE*/
 .feature {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
+  flex-direction: row;
+  gap: 20px;
+  position: relative;
+  margin: 0px 150px;
+  width: 100vw;
+  left: -150px;
+  overflow: hidden;
+;
 }
 
 .feature-text {
-  flex: 1;
-  padding-right: 20px; /* Abstand zwischen Text und Bild */
+  max-width: 50%;
+  padding-left: 150px;
 }
 
-.feature-image {
-  width: 50%; /* Passt die Bildbreite an */
-  height: auto; /* Erhält das Seitenverhältnis */
-  border-radius: 8px; /* Optional: abgerundete Ecken */
+
+/*KARTE*/
+/* Styling für den Container */
+.suche {
+  justify-content: center; /* Zentriert die Inhalte horizontal */
+  align-items: center; /* Zentriert die Inhalte vertikal */
+  padding: 20px; /* Gibt dem Container etwas Platz innen */
+  width: 100%; /* Nimmt die volle verfügbare Breite ein */
+  margin-top: 50px;
 }
 
+/* Styling für das Suchfeld */
+#suche {
+  width: 50%; /* Macht das Suchfeld breiter, z.B. 50% der Containerbreite */
+  padding: 10px 40px; /* Vertikaler und horizontaler Innenabstand */
+  border: none; /* Kein Rand */
+  background-color: #09E85E; /* Grüner Hintergrund */
+  color: white; /* Weiße Textfarbe */
+  font-size: 20px; /* Größere Schriftgröße für bessere Lesbarkeit */
+  text-align: left; /* Text im Input zentrieren */
+  font-family: "industry", sans-serif; /* Schriftart */
+  font-weight: 400; /* Schriftgewicht */
+  outline: none; /* Entfernt den Fokus-Rand, den einige Browser anzeigen */
+  margin: 4px auto; /* Vertikaler Abstand und horizontale Zentrierung */
+  display: block; /* Ermöglicht margin auto für Zentrierung */
+  clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%); /* Spezielle Clip-Path für das Input-Design */
+}
+
+#suche::placeholder {
+  color: white; 
+}
+#suche:focus::placeholder {
+  color: transparent; /* Blendet den Platzhaltertext aus, wenn das Feld fokussiert ist */
+}
+
+#suche {
+  background-image: url('img/search-icon.svg'); /* Pfad zum Icon */
+  background-position: right 30px center; /* Positionierung des Icons */
+  background-repeat: no-repeat;
+  padding-right: 30px; /* Platz lassen für das Icon */
+}
+
+
+/*FAQ*/
 .faq {
-  margin:0px 500px;
+  margin:0px 300px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
+.faq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq li {
+  padding: 20px 0; /* Vertikaler Abstand für bessere Lesbarkeit */
+  border-bottom: 1px solid black; /* Dünne schwarze Linie unter jeder Frage */
+  position: relative; /* Ermöglicht relative Positionierung des Icons */
+}
+
+.faq li:last-child {
+  border-bottom: none; /* Entfernt die Linie unter der letzten Frage */
+}
+
+.faq-icon {
+  position: absolute;
+  right: 0; /* Icon am rechten Ende des Listenelements positionieren */
+  top: 50%; /* Zentriert das Icon vertikal */
+  transform: translateY(-50%); /* Feinjustierung zur genauen Zentrierung */
+}
+
+/*FOOTER*/
 footer {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Stellt gleichmäßige Abstände zwischen den Elementen sicher */
+  align-items: center; /* Zentriert die Inhalte vertikal */
+  padding: 20px; /* Fügt Polsterung hinzu */
+  color: #000;
+  border-top: 1px black solid; /* Fügt eine Linie über dem Footer hinzu */
 }
 
-footer address, footer p {
-  margin: 10px 0;
+footer div {
+  flex: 1; /* Jedes Div nimmt gleich viel Platz ein */
+}
+
+footer .logo img {
+  max-width: 80%; /* Sorgt dafür, dass das Logo vollständig sichtbar ist */
+  height: auto; /* Hält das Seitenverhältnis des Logos */
+}
+
+footer .adress, footer .contact, footer .impressum, footer .daten {
+  padding: 0 10px; /* Fügt horizontalen Abstand hinzu */
 }
 
 footer a {
-  color: #0066cc;
-  text-decoration: none;
+  text-decoration: none; /* Keine Unterstreichung */
+  color: #000;
 }
+
+footer a:hover {
+  text-decoration: underline; /* Fügt eine Unterstreichung beim Hover hinzu */
+}
+

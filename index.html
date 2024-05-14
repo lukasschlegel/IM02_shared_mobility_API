@@ -8,9 +8,71 @@
     <title>Shared Mobility API</title>
 </head>
 <body>
-    <h1>Finde einen Scooter in deiner Nähe</h1> <br>
-    <input type="text" id="suche" placeholder="Standort eingeben"/>
-    <div id="anzeige"></div>
+    <section class="header">
+        <div class="image-container">
+            <img src="img/header-Bild.jpg" alt="Sammlung von E-Scooter in der Stadt" class="header-Bild">
+        </div>
+        <div class="overlay-content">
+            <img src="img/logo.svg" alt="Logo Find your E-Scooter" class="logo">
+            <h1>Entdecke die Stadt auf zwei Rädern</h1>
+            <p>Du findest keinen Scooter in deiner Nähe? Nutze unsere interaktive Karte und scanne nach Scootern in deiner Umgebung egal von welchem Anbieter!</p>
+            <button class="green-button">Scooter finden!</button>
+        </div>
+     </section> 
+
+     <section class="feature">
+        <div class="feature-text">
+            <h2>Finde Einen E-Scooter in deiner Umgebung</h2>
+            <p>Unsere interaktive Karte zeigt dir alle verfügbaren E-Scooter in deiner Nähe. Wähle einen Scooter aus und starte deine Fahrt!</p>
+        </div>
+        <div class="feature-img">
+            <img src="img/person_on-e-scooter.png" alt="E-Scooter" class="feature-image">
+        </div>
+    </section>
+
+    <section class="suche">
+        <input type="text" id="suche" placeholder="Wo suchst du nach einem Scooter?"/>
+        <div id="anzeige"></div>
+    </section>
+
+    <section class="faq">
+        <h2>Du hast noch Fragen?</h2>
+        <p>Hier findest du Antworten auf einige der häufigsten Fragen rund um unsere E-Scooter-Service. Hast du weitere Fragen? Kontaktiere uns gerne direkt!</p>
+        <ul>
+            <li>Wie funktioniert die Scooter-Suchfunktion? <img src="img/arrow.svg" alt="Down Arrow" class="faq-icon"/></li>
+            <li>Kann ich über eure Plattform Scooter reservieren? <img src="img/arrow.svg" alt="Down Arrow" class="faq-icon"/></li>
+            <li>Fallen zusätzliche Gebühren an, wenn ich über eure Website einen Scooter finde? <img src="img/arrow.svg" alt="Down Arrow" class="faq-icon"/></li>
+            <li>Wie aktuell sind die Informationen über die Verfügbarkeit der Scooter?<img src="img/arrow.svg" alt="Down Arrow" class="faq-icon"/></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <img src="img/logo_black.svg" alt="Logo Find your E-Scooter" class="footer-logo">
+        </div>
+        <div class="adress">
+            <p class="small">Find your Scooter GmbH<br>
+            Beispielstrasse 33<br>
+            8766 Beispielstadt<br>
+        </p>
+        </div>
+
+        <div class="contact">
+        <p class="small"> So erreichst du uns<br>
+        <a href="mailto:beispiel@mail.ch">beispiel@mail.ch</a> <br>
+        069 756 74 94
+        </p>
+
+        </div>
+        <div class="impressum">
+        <p class="small"><a href="#">Impressum</a></p>
+        </div>
+
+        <div class="daten">
+        <p class="small"><a href="#">Datenschutz</a></p>
+        </div>
+    </footer>
+
 <script src="script.js" type="module"></script>   
 </body>
 </html>
