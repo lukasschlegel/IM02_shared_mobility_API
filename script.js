@@ -41,3 +41,5 @@ suche.addEventListener('input', async function() {
 })
 
 //bedingung das nicht alle station die keinen name haben nicht aufgeführt werden:
+
+
