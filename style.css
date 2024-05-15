@@ -252,6 +252,22 @@ footer a:hover {
 }
 
 .scooterpic {
-  width: 20%;
+  width: 85%;
   height: auto;
+  border-radius: 10px;
 }
+
+.scootertitle {
+display: flex;
+font-weight: bold;
+align-items: center;
+
+}
+
+.scooterlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }

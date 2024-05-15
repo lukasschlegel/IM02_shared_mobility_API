@@ -20,21 +20,24 @@ function datenDarstellen(scooter) {
     anzeige.innerHTML = '';
     scooter.forEach( scooter => {
         let div = document.createElement('div');
+        div.className = 'scooterlist';
         let image = document.createElement('img')
-        image.className = 'scooterpic'
+        image.className = 'scooterpic';
         image.src = "img/Stadtparking1.webp";
         div.appendChild(image);
         let title = document.createElement('p');
+        title.className = 'scootertitle'
         title.innerText = scooter.attributes.station_name;
         div.appendChild(title);
         anzeige.appendChild(div);
 
-        if (undefined === true)
+        if (scooter.attributes.station_name = undefined === true)
         {
             anzeige.removeChild(div);
         } else {
             anzeige.appendChild(div);
         }
+        // keine anzeige wenn undefined
     })
 }
 datenDarstellen(ScooterDaten);
@@ -46,7 +49,5 @@ suche.addEventListener('input', async function() {
     console.log(scooter_aus_suche);
     datenDarstellen(scooter_aus_suche)
 })
-
-//bedingung das nicht alle station die keinen name haben aufgeführt werden:
 
 
