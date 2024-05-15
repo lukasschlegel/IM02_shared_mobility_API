@@ -16,18 +16,25 @@ async function holeDaten(url) {
 let ScooterDaten = await holeDaten('https://api.sharedmobility.ch/v1/sharedmobility/identify?filters=ch.bfe.sharedmobility.vehicle_type=E-Scooter&Geometry=8.72334,47.50024&Tolerance=500&offset=0&gemetryFormat=esrijson');
 console.log(ScooterDaten);
 
-
 function datenDarstellen(scooter) {
     anzeige.innerHTML = '';
     scooter.forEach( scooter => {
         let div = document.createElement('div');
         let image = document.createElement('img')
+        image.className = 'scooterpic'
         image.src = "img/Stadtparking1.webp";
         div.appendChild(image);
         let title = document.createElement('p');
         title.innerText = scooter.attributes.station_name;
         div.appendChild(title);
         anzeige.appendChild(div);
+
+        if (undefined === true)
+        {
+            anzeige.removeChild(div);
+        } else {
+            anzeige.appendChild(div);
+        }
     })
 }
 datenDarstellen(ScooterDaten);
@@ -40,6 +47,6 @@ suche.addEventListener('input', async function() {
     datenDarstellen(scooter_aus_suche)
 })
 
-//bedingung das nicht alle station die keinen name haben nicht aufgeführt werden:
+//bedingung das nicht alle station die keinen name haben aufgeführt werden:
 
 
