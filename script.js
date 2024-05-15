@@ -21,9 +21,9 @@ function datenDarstellen(scooter) {
     anzeige.innerHTML = '';
     scooter.forEach( scooter => {
         let div = document.createElement('div');
-        // let image = document.createElement('img')
-        // image.src = '';
-        // div.appendChild(image);
+        let image = document.createElement('img')
+        image.src = "img/Stadtparking1.webp";
+        div.appendChild(image);
         let title = document.createElement('p');
         title.innerText = scooter.attributes.station_name;
         div.appendChild(title);
