@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/uxd2gun.css">
     <title>Shared Mobility API</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />   
 </head>
 <body>
     <section class="header">
@@ -34,6 +36,17 @@
         <input type="text" id="suche" placeholder="Wo suchst du nach einem Scooter?"/>
         <div id="anzeige"></div>        
         </div>
+        <div id='map'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
+        const map = new mapboxgl.Map({
+	    container: 'map', // container ID
+	    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+	    center: [8.5, 46.85], // starting position [lng, lat]
+	    zoom: 6, // starting zoom
+        }); 
+</script>
+
     </section>
 
     <section class="faq">

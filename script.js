@@ -20,7 +20,7 @@ function datenDarstellen(scooter) {
     anzeige.innerHTML = '';
     scooter.forEach( scooter => {
         let div = document.createElement('div');
-            div.className = 'scooterlist';
+            div.className = 'scooterrow';
                 let image = document.createElement('img')
                 image.className = 'scooterpic';
                 image.src = "img/Stadtparking1.webp";
