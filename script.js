@@ -20,11 +20,11 @@ function datenDarstellen(scooter) {
     anzeige.innerHTML = '';
     scooter.forEach( scooter => {
         let div = document.createElement('div');
-        div.className = 'scooterlist';
-        let image = document.createElement('img')
-        image.className = 'scooterpic';
-        image.src = "img/Stadtparking1.webp";
-        div.appendChild(image);
+            div.className = 'scooterlist';
+                let image = document.createElement('img')
+                image.className = 'scooterpic';
+                image.src = "img/Stadtparking1.webp";
+                div.appendChild(image);
         let title = document.createElement('p');
         title.className = 'scootertitle'
         title.innerText = scooter.attributes.station_name;

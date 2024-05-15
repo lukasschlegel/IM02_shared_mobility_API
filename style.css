@@ -270,8 +270,9 @@ font-weight: bold;
 
 .scooterlist {
   display: grid;
+  padding: 40px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.1fr;
+  grid-template-rows: auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   }
