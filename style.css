@@ -281,6 +281,9 @@ font-weight: bold;
 }
 
 #map {
-width: 1400px;
-height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  height: 400px;
   }
