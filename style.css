@@ -124,6 +124,9 @@ body {
     justify-content: center;
 
 }
+.header-Bild {
+    width: 100%;
+}
 
 
 /*FEATURE*/
@@ -192,7 +195,7 @@ body {
 /*FAQ*/
 .faq {
   margin:0px 300px;
-  padding-top: 50px;
+  padding-top: 0px;
   padding-bottom: 150px;
 }
 
@@ -282,13 +285,29 @@ font-weight: bold;
 
 #map {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1400px;
-  height: 400px;
+  width: 1500px;
+  height: 500px;
   }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.marker {
+  background-image: url('img/markergreen.webp');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 50px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "industry", sans-serif;
 }
