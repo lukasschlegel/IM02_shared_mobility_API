@@ -18,10 +18,12 @@
             <img src="img/logo.svg" alt="Logo Find your E-Scooter" class="logo">
             <h1>Entdecke die Stadt auf zwei Rädern</h1>
             <p>Du findest keinen Scooter in deiner Nähe? Nutze unsere interaktive Karte und scanne nach Scootern in deiner Umgebung egal von welchem Anbieter!</p>
-            <button class="green-button">Scooter finden!</button>
+            <button class="green-button">
+                <a href="#map">Finde jetzt einen Scooter auf der Karte!</a>
+            </button>
+
         </div>
      </section> 
-
      <section class="feature">
         <div class="feature-text">
             <h2>Finde Einen E-Scooter in deiner Umgebung</h2>
@@ -34,18 +36,26 @@
 
     <section class="suche">
         <input type="text" id="suche" placeholder="Wo suchst du nach einem Scooter?"/>
-        <div id="anzeige"></div>        
-        </div>
-        <div id='map'></div>
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
-        const map = new mapboxgl.Map({
-	    container: 'map', // container ID
-	    style: 'mapbox://styles/mapbox/streets-v12', // style URL
-	    center: [8.5, 46.85], // starting position [lng, lat]
-	    zoom: 6, // starting zoom
-        }); 
-        </script>
+    </section>
+
+    <section id="map">
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
+    const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+    center: [8.5, 46.85], // starting position [lng, lat]
+    zoom: 6, // starting zoom
+    }); 
+    </script>
+    </section>
+    
+    <section class="suche">
+        <input type="text" id="suche" placeholder="Finde eine Scooterstation"/>
+    </section>
+
+    <section>
+    <div id="anzeige"></div> 
     </section>
 
     <section class="faq">

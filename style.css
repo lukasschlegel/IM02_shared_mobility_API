@@ -98,7 +98,7 @@ p {
     background-color: #09E85E;
     color: white; /* Textfarbe Weiß */
     border: none; /* Kein Rand */
-    padding: 10px 30px; /* Innenabstand */
+    padding: 10px 40px; /* Innenabstand */
     text-align: center; /* Zentrierter Text */
     text-decoration: none; /* Keine Unterstreichung */
     display: inline-block; /* Machen Sie den Button zu einem Block-Element */
@@ -287,3 +287,8 @@ font-weight: bold;
   width: 1400px;
   height: 400px;
   }
+
+a {
+  text-decoration: none;
+  color: white;
+}

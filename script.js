@@ -31,9 +31,10 @@ function datenDarstellen(scooter) {
         div.appendChild(title);
         anzeige.appendChild(div);
 
-        if (scooter.attributes.station_name = undefined === true)
+        if (scooter.attributes.station_name == 'undefined')
         {
-            anzeige.removeChild(div);
+            anzeige.appendChild('p');
+            anzeige.innerText = 'Keine Ergebnisse';
         } else {
             anzeige.appendChild(div);
         }
