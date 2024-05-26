@@ -57,6 +57,7 @@ p {
 
 /*HEADER*/
 .image-container {
+    display: flex;
     position: relative;
     display: inline-block; /* oder block, abhängig von Ihren Bedürfnissen */
   }
@@ -88,6 +89,7 @@ p {
     margin-bottom: 100px; 
     max-width: 300px;
     align-items: center;
+    padding-top: 60px;
   }
 
   .overlay-content p {
@@ -227,7 +229,7 @@ footer {
   display: flex;
   justify-content: space-between; /* Stellt gleichmäßige Abstände zwischen den Elementen sicher */
   align-items: center; /* Zentriert die Inhalte vertikal */
-  padding: 20px; /* Fügt Polsterung hinzu */
+  padding: 10px; /* Fügt Polsterung hinzu */
   color: #000;
   border-top: 1px black solid; /* Fügt eine Linie über dem Footer hinzu */
 }

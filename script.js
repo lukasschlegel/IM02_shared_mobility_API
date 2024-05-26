@@ -60,7 +60,7 @@ suche.addEventListener('input', async function() {
 mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
 const map = new mapboxgl.Map({
 container: 'map', // container ID
-style: 'mapbox://styles/mapbox/light-v10', // style URL
+style: 'mapbox://styles/mapbox/light-v11', // style URL
 center: [8.5, 46.85], // starting position [lng, lat]
 zoom: 6, // starting zoom
 });
