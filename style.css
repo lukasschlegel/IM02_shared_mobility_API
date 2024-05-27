@@ -306,10 +306,11 @@ a {
 }
 
 .mapboxgl-popup {
-  max-width: 50px;
+  max-width: 30px;
 }
 
 .mapboxgl-popup-content {
+  padding-top: 50px;
   text-align: center;
   font-family: "industry", sans-serif;
 }

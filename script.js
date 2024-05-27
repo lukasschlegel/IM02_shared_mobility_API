@@ -61,8 +61,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiM
 const map = new mapboxgl.Map({
 container: 'map', // container ID
 style: 'mapbox://styles/mapbox/light-v11', // style URL
-center: [8.5, 46.85], // starting position [lng, lat]
-zoom: 6, // starting zoom
+center: [8.538, 47.38], // starting position [lng, lat]
+zoom: 14.2, // starting zoom
 });
 
 const geojson = {
@@ -76,7 +76,7 @@ const geojson = {
   },
     properties: {
     title: 'Mapbox',
-    description: 'FHGR Standort Zürich'
+    description: 'Dein aktueller Standort: FHGR Standort Zürich'
   }
 },
 ]
@@ -89,5 +89,15 @@ const el = document.createElement('div');
 el.className = 'marker';
 
 // make a marker for each feature and add to the map
-new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
-} 
+new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map); 
+
+new mapboxgl.Marker(el)
+  .setLngLat(feature.geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(
+        `<p>${feature.properties.description}</p>`
+      )
+  )
+  .addTo(map);
+}
