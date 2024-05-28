@@ -297,11 +297,11 @@ a {
 }
 
 .marker {
-  background-image: url('img/markergreen.webp');
+  background-image: url('img/StreetBooster-two-green-2-scaled.webp');
   background-size: cover;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  border-radius: 0%;
   cursor: pointer;
 }
 
