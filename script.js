@@ -11,8 +11,9 @@ async function holeDaten(url) {
         // wenn ein fehler auftaucht
     }
 }
-let ScooterDaten = await holeDaten('https://api.sharedmobility.ch/v1/sharedmobility/identify?filters=ch.bfe.sharedmobility.vehicle_type=E-Scooter&Geometry=8.536919584914061,47.38059039878863&Tolerance=500&offset=0&gemetryFormat=esrijson');
-console.log(ScooterDaten);
+
+//let ScooterDaten = await holeDaten('https://api.sharedmobility.ch/v1/sharedmobility/identify?filters=ch.bfe.sharedmobility.vehicle_type=E-Scooter&Geometry=8.536919584914061,47.38059039878863&Tolerance=500&offset=0&gemetryFormat=esrijson');
+////console.log(ScooterDaten);
 
 // function datenDarstellen(scooter) {
 //     anzeige.innerHTML = '';
@@ -29,7 +30,7 @@ console.log(ScooterDaten);
 //         div.appendChild(title);
 //         anzeige.appendChild(div);    
 
-        function datenDarstellen(scooter) {
+  /*      function datenDarstellen(scooter) {
             anzeige.innerHTML = '';
             scooter.forEach( scooter => {
                 let div = document.createElement('div');
@@ -44,8 +45,41 @@ console.log(ScooterDaten);
                 div.appendChild(title);
                 anzeige.appendChild(div);
     })
+}*/
+//datenDarstellen(ScooterDaten);
+
+
+
+function datenInArray(data) {
+    let scooterArray = [];
+    
+    data.forEach( scooter => {
+        let scooterObj = {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [scooter.geometry.x, scooter.geometry.y]
+          },
+          properties: {
+            title: 'Mapbox',
+            description: 'Dein aktueller Standort: FHGR Standort Zürich1'
+          }
+      }
+      scooterArray.push(scooterObj);
+    })
+    
+
+    console.log(scooterArray);
+    return scooterArray;
 }
-datenDarstellen(ScooterDaten);
+
+async function init() {
+  let ScooterDaten = await holeDaten('https://api.sharedmobility.ch/v1/sharedmobility/identify?filters=ch.bfe.sharedmobility.vehicle_type=E-Scooter&Geometry=8.536919584914061,47.38059039878863&Tolerance=500&offset=0&gemetryFormat=esrijson');
+  let mapBoxArray = datenInArray(ScooterDaten);
+  console.log(mapBoxArray);
+  drawMap(mapBoxArray)
+}
+init();
 
 suche.addEventListener('input', async function() {
     let ergebnis = suche.value;
@@ -56,48 +90,37 @@ suche.addEventListener('input', async function() {
 })
 
 // Marker zu Karte hinzufügen für Scooter:
+function drawMap(pointArray){
+  mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
+  const map = new mapboxgl.Map({
+  container: 'map', // container ID
+  style: 'mapbox://styles/mapbox/light-v11', // style URL
+  center: [8.538, 47.38], // starting position [lng, lat]
+  zoom: 14.2, // starting zoom
+  });
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
-const map = new mapboxgl.Map({
-container: 'map', // container ID
-style: 'mapbox://styles/mapbox/light-v11', // style URL
-center: [8.538, 47.38], // starting position [lng, lat]
-zoom: 14.2, // starting zoom
-});
+  const geojson = {
+      type: 'FeatureCollection',
+      features: pointArray
 
-const geojson = {
-    type: 'FeatureCollection',
-    features: [
-{
-    type: 'Feature',
-    geometry: {
-    type: 'Point',
-    coordinates: [8.536919584914061, 47.38059039878863]
-  },
-    properties: {
-    title: 'Mapbox',
-    description: 'Dein aktueller Standort: FHGR Standort Zürich'
+  };
+  // add markers to map
+  for (const feature of geojson.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map); 
+
+  new mapboxgl.Marker(el)
+    .setLngLat(feature.geometry.coordinates)
+    .setPopup(
+      new mapboxgl.Popup({ offset: 25 }) // add popups
+        .setHTML(
+          `<p>${feature.properties.description}</p>`
+        )
+    )
+    .addTo(map);
   }
-},
-]
-
-};
-// add markers to map
-for (const feature of geojson.features) {
-// create a HTML element for each feature
-const el = document.createElement('div');
-el.className = 'marker';
-
-// make a marker for each feature and add to the map
-new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map); 
-
-new mapboxgl.Marker(el)
-  .setLngLat(feature.geometry.coordinates)
-  .setPopup(
-    new mapboxgl.Popup({ offset: 25 }) // add popups
-      .setHTML(
-        `<p>${feature.properties.description}</p>`
-      )
-  )
-  .addTo(map);
 }
