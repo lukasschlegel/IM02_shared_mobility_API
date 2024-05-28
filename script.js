@@ -135,7 +135,7 @@ function drawMap(pointArray){
 const geocoder = new MapboxGeocoder({
   accessToken: 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA', // Set the access token
   placeholder: 'Suche nach einer Adresse', // Placeholder text for the search bar
-  mapboxgl: 3, // Set the mapbox-gl instance
+  mapboxgl: 0, // Set the mapbox-gl instance
   marker: false, // Do not use the default marker style
   // geocorder.className = 'geocoder',
 });
