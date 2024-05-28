@@ -124,6 +124,8 @@ body {
     background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 
 }
 .header-Bild {
@@ -285,12 +287,6 @@ font-weight: bold;
   padding: 20px;
 }
 
-#map {
-  display: flex;
-  width: 1500px;
-  height: 500px;
-  }
-
 a {
   text-decoration: none;
   color: white;
@@ -314,3 +310,14 @@ a {
   text-align: center;
   font-family: "industry", sans-serif;
 }
+
+#map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  }
+
+/* .geocoder {
+ display: flex;
+} */

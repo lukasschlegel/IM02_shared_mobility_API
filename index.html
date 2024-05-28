@@ -4,10 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://use.typekit.net/uxd2gun.css">
+    <link rel="stylesheet" href="https://use.typekit.net/uxd2gun.css"/>
     <title>Find your E-Scooter</title>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet"/>
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1-dev/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1-dev/mapbox-gl-geocoder.css" type="text/css"/>
 </head>
 <body>
     <section class="header">
@@ -38,7 +40,8 @@
         <input type="text" id="suche" placeholder="Wo suchst du nach einem Scooter?"/>
     </section>
 
-    <section id="map">
+    <section class="sectionclass"></section>
+        <div id="map"></div>
     </section>
 
     <section>
