@@ -111,13 +111,13 @@ function drawMap(pointArray) {
 
   new mapboxgl.Marker(el)
     .setLngLat(feature.geometry.coordinates)
-    .setPopup(
-      new mapboxgl.Popup({ offset: 25 }) // add popups
-        .setHTML(
-          `<p>${feature.properties.description}</p>`
-        )
-    )
-    .addTo(map);
+    // .setPopup(
+    //   new mapboxgl.Popup({ offset: 25 }) // add popups
+    //     .setHTML(
+    //       `<p>${feature.properties.description}</p>`
+    //     )
+    // )
+    // .addTo(map);
   };
   
    // Add geolocate control to the map.
@@ -146,11 +146,9 @@ const geocoder = new MapboxGeocoder({
             return `<div class='geocoder-dropdown-item'>
                     <img class='geocoder-dropdown-icon' src='https://unpkg.com/@mapbox/maki@6.1.0/icons/${maki}-15.svg'>
                     <span class='geocoder-dropdown-text'>
-                    ${item.text}
-                    </span>
-                </div>`;
+                    ${item.text} </span>
+                    </div>`;
         },
-
 
 });
 

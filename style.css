@@ -164,38 +164,6 @@ body {
   margin-top: 50px;
 }
 
-/* Styling für das Suchfeld */
-#suche {
-  width: 50%; /* Macht das Suchfeld breiter, z.B. 50% der Containerbreite */
-  padding: 10px 40px; /* Vertikaler und horizontaler Innenabstand */
-  border: none; /* Kein Rand */
-  background-color: #09E85E; /* Grüner Hintergrund */
-  color: white; /* Weiße Textfarbe */
-  font-size: 20px; /* Größere Schriftgröße für bessere Lesbarkeit */
-  text-align: left; /* Text im Input zentrieren */
-  font-family: "industry", sans-serif; /* Schriftart */
-  font-weight: 400; /* Schriftgewicht */
-  outline: none; /* Entfernt den Fokus-Rand, den einige Browser anzeigen */
-  margin: 4px auto; /* Vertikaler Abstand und horizontale Zentrierung */
-  display: block; /* Ermöglicht margin auto für Zentrierung */
-  clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%); /* Spezielle Clip-Path für das Input-Design */
-}
-
-#suche::placeholder {
-  color: white; 
-}
-#suche:focus::placeholder {
-  color: transparent; /* Blendet den Platzhaltertext aus, wenn das Feld fokussiert ist */
-}
-
-#suche {
-  background-image: url('img/search-icon.svg'); /* Pfad zum Icon */
-  background-position: right 30px center; /* Positionierung des Icons */
-  background-repeat: no-repeat;
-  padding-right: 30px; /* Platz lassen für das Icon */
-}
-
-
 /*FAQ*/
 .faq {
   margin:0px 300px;
@@ -263,7 +231,6 @@ footer a:hover {
   max-width: 400px;
   max-height: 400px;
   border-radius: 10px;
-
 }
 
 .scootertitle {
@@ -316,7 +283,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 500px;
-  margin-top: 75px;
+  margin-top: 30px;
   }
 
 .geocoder-dropdown-icon {
@@ -335,7 +302,8 @@ line-height: normal;
 
 .geocoder {
   position: center;
-  
+  padding-top: 50px;
+  padding-bottom: 0px;
 
 .mapboxgl-ctrl-geocoder {
   min-width: 60%;
@@ -352,6 +320,13 @@ line-height: normal;
   margin: 4px auto; /* Vertikaler Abstand und horizontale Zentrierung */
   display: block; /* Ermöglicht margin auto für Zentrierung */
 }
+}
 
-
+.geocoder-placeholder-text {
+  color: white;
+  font-family: Industry;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
