@@ -293,7 +293,7 @@ a {
 }
 
 .marker {
-  background-image: url('img/StreetBooster-two-green-2-scaled.webp');
+  background-image: url('img/scooter_icon.webp');
   background-size: cover;
   width: 60px;
   height: 60px;
@@ -316,8 +316,42 @@ a {
   justify-content: center;
   align-items: center;
   height: 500px;
+  margin-top: 75px;
   }
 
-/* .geocoder {
- display: flex;
-} */
+.geocoder-dropdown-icon {
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.geocoder-dropdown-text {
+color: #09E85E;
+font-family: Industry;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.geocoder {
+  position: center;
+  
+
+.mapboxgl-ctrl-geocoder {
+  min-width: 60%;
+  margin: 0 auto;
+  background-color: #09E85E;
+  padding: 0px 40px; /* Vertikaler und horizontaler Innenabstand */
+  border: none; /* Kein Rand */
+  color: white; /* Weiße Textfarbe */
+  font-size: 20px; /* Größere Schriftgröße für bessere Lesbarkeit */
+  text-align: left; /* Text im Input zentrieren */
+  font-family: "industry", sans-serif; /* Schriftart */
+  font-weight: 400; /* Schriftgewicht */
+  outline: none; /* Entfernt den Fokus-Rand, den einige Browser anzeigen */
+  margin: 4px auto; /* Vertikaler Abstand und horizontale Zentrierung */
+  display: block; /* Ermöglicht margin auto für Zentrierung */
+}
+
+
+}
