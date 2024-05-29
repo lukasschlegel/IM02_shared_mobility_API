@@ -139,4 +139,24 @@ const geocoder = new MapboxGeocoder({
   mapboxgl: 0, // Set the mapbox-gl instance
   marker: false, // Do not use the default marker style
   types: 'poi',
-        // see https://docs.mapbox.com/api/searc
+        // see https://docs.mapbox.com/api/search/#geocoding-response-object for information about the schema of each response feature
+        render: function (item) {
+            // extract the item's maki icon or use a default
+            const maki = item.properties.maki || 'marker';
+            return `<div class='geocoder-dropdown-item'>
+                    <img class='geocoder-dropdown-icon' src='https://unpkg.com/@mapbox/maki@6.1.0/icons/${maki}-15.svg'>
+                    <span class='geocoder-dropdown-text'>
+                    ${item.text}
+                    </span>
+                </div>`;
+        },
+
+
+});
+
+// Add the geocoder to the map
+// map.addControl(geocoder);
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+}
+
+
