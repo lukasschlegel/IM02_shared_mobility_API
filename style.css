@@ -268,16 +268,6 @@ a {
   cursor: pointer;
 }
 
-.mapboxgl-popup {
-  max-width: 30px;
-}
-
-.mapboxgl-popup-content {
-  padding-top: 50px;
-  text-align: center;
-  font-family: "industry", sans-serif;
-}
-
 #map {
   display: flex;
   justify-content: center;
@@ -304,7 +294,7 @@ line-height: normal;
   position: center;
   padding-top: 50px;
   padding-bottom: 0px;
-
+/* Hier KEINE Klammer ergänzen!! */
 .mapboxgl-ctrl-geocoder {
   min-width: 60%;
   margin: 0 auto;
@@ -322,11 +312,36 @@ line-height: normal;
 }
 }
 
-.geocoder-placeholder-text {
+/* .geocoder-placeholder-text {
   color: white;
   font-family: Industry;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+} */
+/* 
+.geocoder-close-button {
+  color: white;
+  font-family: Industry;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+} */
+
+.mapboxgl-popup {
+  max-width: 10%;
 }
+
+.mapboxgl-popup-content {
+  padding-top: 40px;
+  text-align: center;
+  font: 400 15px/22px "industry", sans-serif;
+  color: black;
+}
+
+.mapboxgl-popup-content-wrapper {
+padding: 1px;
+}
+

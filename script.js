@@ -62,7 +62,8 @@ function datenInArray(data) {
           },
           properties: {
             title: 'Mapbox',
-            description: 'Dein aktueller Standort: FHGR Standort Zürich1'
+            description: `<strong>${scooter.attributes.vehicle_type}</strong> <br> 
+                          ${scooter.attributes.station_name}`
           }
       }
       scooterArray.push(scooterObj);
@@ -111,13 +112,14 @@ function drawMap(pointArray) {
 
   new mapboxgl.Marker(el)
     .setLngLat(feature.geometry.coordinates)
-    // .setPopup(
-    //   new mapboxgl.Popup({ offset: 25 }) // add popups
-    //     .setHTML(
-    //       `<p>${feature.properties.description}</p>`
-    //     )
-    // )
-    // .addTo(map);
+    .setPopup(
+      new mapboxgl.Popup({ offset: 25 }) // add popups
+        .setHTML(
+          `<p>${feature.properties.description}</p>
+          <p> <a href="${feature.properties.provider_apps_ios_store_uri}">App Store</a> | <a href="${feature.properties.provider_apps_android_store_uri}">Google Play</a></p>`
+        )
+    )
+    .addTo(map);
   };
   
    // Add geolocate control to the map.
