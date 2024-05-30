@@ -155,7 +155,6 @@ const geocoder = new MapboxGeocoder({
 });
 
 // Add the geocoder to the map
-// map.addControl(geocoder);
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 }
 

@@ -278,15 +278,14 @@ a {
 
 .geocoder-dropdown-icon {
   margin-right: 10px;
-  padding: 10px;
 }
 
 .geocoder-dropdown-text {
-color: #09E85E;
+color: black;
 font-family: Industry;
 font-size: 20px;
 font-style: normal;
-font-weight: 700;
+font-weight: 400;
 line-height: normal;
 }
 
