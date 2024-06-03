@@ -334,8 +334,7 @@ line-height: normal;
 }
 
 .mapboxgl-popup-content {
-  display: flexbox;
-  padding-top: 40px;
+  padding-top: 1px;
   text-align: center;
   font: 400 15px/22px "industry", sans-serif;
   color: black;
