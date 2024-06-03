@@ -62,8 +62,8 @@ function datenInArray(data) {
           },
           properties: {
             title: 'Mapbox',
-            description: `<strong>${scooter.attributes.vehicle_type}</strong> <br> 
-                          ${scooter.attributes.station_name}`
+            description: `<strong>Scooter</strong> <br> 
+                          ${scooter.attributes.station_name} <br>`
           }
       }
       scooterArray.push(scooterObj);
@@ -115,8 +115,8 @@ function drawMap(pointArray) {
     .setPopup(
       new mapboxgl.Popup({ offset: 25 }) // add popups
         .setHTML(
-          `<p>${feature.properties.description}</p>
-          <p> <a href="${feature.properties.provider_apps_ios_store_uri}">App Store</a> | <a href="${feature.properties.provider_apps_android_store_uri}">Google Play</a></p>`
+          `<p class="describtion">${feature.properties.description}</p>
+          <strong> <a class="applink" href="https://apps.apple.com/us/app/tier-move-better/id1436140272?mt=8">App Store</a> | <a class="applink" href="https://play.google.com/store/apps/details?id=io.voiapp.voi&hl=en&gl=US">Google Play</a></strong>`
         )
     )
     .addTo(map);
