@@ -1,136 +1,237 @@
 * {
-    margin: 0 0;
-    padding: 0 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-
-ul {
-    list-style-type: none;
-    color: #000;
-
-font-family: Industry;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: "industry", sans-serif;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 0.1rem;
-    font-family: "industry", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 0.1rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-family: "industry", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  padding-top: 20px;
+  margin-bottom: 0;
 }
 
 p {
-    font-size: 1.4rem;
-    font-family: "industry", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 1rem; 
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1rem;
 }
 
 .small {
   font-size: 1rem;
-    font-family: "industry", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 1rem; 
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1rem;
 }
 
-/*HEADER*/
+/* HEADER */
 .image-container {
-    display: flex;
-    position: relative;
-    display: inline-block; /* oder block, abhängig von Ihren Bedürfnissen */
-  }
-  
-  .image-container img {
-    display: block; /* Entfernt den Standardabstand unter dem Bild */
-    width: 100%; /* Stellen Sie sicher, dass das Bild den Container ausfüllt */
-    height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0px 150px;
+
+}
+
+.logo {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.green-button {
+  background-color: #09E85E;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "industry", sans-serif;
+  margin: 4px 2px;
+  cursor: pointer;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  font-weight: 800;
+  transition: padding 0.3s ease;
+}
+
+.green-button:hover {
+  background-color: #31f27b;
+  padding: 10px 50px;
+}
+
+.header-Bild {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+      font-size: 2.5rem;
   }
 
-  .overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;  
-    height: 100%; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 250px
-  }
-  
-  
-  .logo {
-    height: auto;  
-    margin-bottom: 100px; 
-    max-width: 300px;
-    align-items: center;
-    padding-top: 60px;
+  h2 {
+      font-size: 2rem;
   }
 
-  .overlay-content p {
-    margin-bottom: 30px;
+  h3 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+  }
+
+  .small {
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
   }
 
   .green-button {
-    background-color: #09E85E;
-    color: white; /* Textfarbe Weiß */
-    border: none; /* Kein Rand */
-    padding: 10px 40px; /* Innenabstand */
-    text-align: center; /* Zentrierter Text */
-    text-decoration: none; /* Keine Unterstreichung */
-    display: inline-block; /* Machen Sie den Button zu einem Block-Element */
-    font-size: 20px; /* Schriftgröße */
-    margin: 4px 2px; /* Äußerer Abstand */
-    cursor: pointer; /* Cursor als Zeiger */
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-    font-family: "industry", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    transition: padding 0.3s ease;
+      font-size: 18px;
+      padding: 10px 40px;
   }
 
-  .green-button:hover {
-    background-color: #31f27b;
-    padding: 10px 40px;
+  .logo {
+      max-width: 200px;
+      margin-bottom: 50px;
   }
 
-
-body {
-    background-color: rgb(255, 255, 255);
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
+  .overlay-content {
+    padding: 0px 100px;
+  }
 }
-.header-Bild {
-    width: 100%;
+
+@media (max-width: 900px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.75rem;
+  }
+
+  h3 {
+      font-size: 1rem;
+  }
+
+  p {
+      font-size: 1rem;
+      line-height: 1.3rem;
+  }
+
+  .small {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .green-button {
+      font-size: 16px;
+      padding: 10px 40px;
+  }
+
+  .logo {
+      max-width: 150px;
+      margin-bottom: 50px;
+  }
+
+  .overlay-content {
+    padding: 0px 50px;
+  }
 }
+
+@media (max-width: 700px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  h2 {
+      font-size: 1.3rem;
+  }
+
+  h3 {
+      font-size: 0.9rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+  }
+
+  .small {
+    font-size: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .green-button {
+      font-size: 14px;
+      padding: 10px 40px;
+  }
+
+  .logo {
+      max-width: 120px;
+      margin-bottom: 30px;
+  }
+
+  .overlay-content {
+    padding: 0px 40px;
+  }
+}
+
+
 
 
 /*FEATURE*/
@@ -140,19 +241,63 @@ body {
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  position: relative;
-  margin: 0px 150px;
+  margin: 50px 150px;
   width: 100vw;
-  left: -150px;
-  overflow: hidden;
-;
 }
 
 .feature-text {
-  max-width: 50%;
-  padding-left: 150px;
+  max-width: 30%;
 }
 
+.feature-image {
+  max-width: 70%;
+}
+
+@media (max-width: 1200px) {
+  .feature {
+    margin: 40px 100px;
+  }
+
+  .feature-text {
+    max-width: 25%;
+  }
+
+  .feature-image {
+    max-width: 75%;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .feature {
+    margin: 30px 50px 30px 100px;
+  }
+
+  .feature-text {
+    max-width: 25%;
+  }
+
+  .feature-image {
+    max-width: 75%;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  .feature {
+    margin: 30px 40px;
+   display: block;
+  }
+
+  .feature-text {
+    max-width: 100vw;
+  }
+
+  .feature-image {
+    max-width: 100vw;
+  }
+  
+}
 
 /*KARTE*/
 /* Styling für den Container */
@@ -164,43 +309,71 @@ body {
   margin-top: 50px;
 }
 
-/*FAQ*/
-.faq {
-  margin:0px 300px;
-  padding-top: 0px;
-  padding-bottom: 150px;
+
+/*Team*/
+.team {
+  margin: 0px 150px;
+  padding-bottom: 50px;
+  }
+
+.team-members{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
 }
 
-.faq ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+@media (max-width: 1200px) {
+  .team {
+    margin: 0px 100px;
+  }
+  .team-members{
+    padding-top: 30px;
+    gap: 80px;}
 }
 
-.faq li {
-  padding: 20px 0; /* Vertikaler Abstand für bessere Lesbarkeit */
-  border-bottom: 1px solid black; /* Dünne schwarze Linie unter jeder Frage */
-  position: relative; /* Ermöglicht relative Positionierung des Icons */
+@media (max-width: 900px) {
+  .team {
+    margin: 0px 50px;
+  }
+
+  .team-members{
+    padding-top: 20px;
+    gap: 50px;
+  }
 }
 
-.faq li:last-child {
-  border-bottom: none; /* Entfernt die Linie unter der letzten Frage */
+@media (max-width: 700px) {
+  .team {
+    margin: 0px 40px;
+  }
+
+  .team-members{
+    padding-top: 10px;
+    gap: 20px;
+  }
 }
 
-.faq-icon {
-  position: absolute;
-  right: 0; /* Icon am rechten Ende des Listenelements positionieren */
-  top: 50%; /* Zentriert das Icon vertikal */
-  transform: translateY(-50%); /* Feinjustierung zur genauen Zentrierung */
+@media (max-width: 500px){
+  .team-members{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
 }
+
 
 /*FOOTER*/
 footer {
   display: flex;
   justify-content: space-between; /* Stellt gleichmäßige Abstände zwischen den Elementen sicher */
   align-items: center; /* Zentriert die Inhalte vertikal */
-  padding: 10px; /* Fügt Polsterung hinzu */
   color: #000;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 20px;
   border-top: 1px black solid; /* Fügt eine Linie über dem Footer hinzu */
 }
 
@@ -208,7 +381,7 @@ footer div {
   flex: 1; /* Jedes Div nimmt gleich viel Platz ein */
 }
 
-footer .logo img {
+footer .logo-footer img {
   max-width: 80%; /* Sorgt dafür, dass das Logo vollständig sichtbar ist */
   height: auto; /* Hält das Seitenverhältnis des Logos */
 }
@@ -226,6 +399,20 @@ footer a:hover {
   text-decoration: underline; /* Fügt eine Unterstreichung beim Hover hinzu */
 }
 
+@media (max-width: 700px) {
+  footer {
+    padding-left: 0;
+    flex-direction: column; /* Stellt die Elemente in einer Spalte anstatt in einer Reihe dar */
+    text-align: center; /* Zentriert den Text */
+  }
+
+  footer div {
+    padding: 10px 0; /* Fügt vertikalen Abstand hinzu */
+  }
+  
+}
+
+/*scooters*/
 .scooterpic {
   position: relative;
   max-width: 400px;
@@ -260,10 +447,10 @@ a {
 }
 
 .marker {
-  background-image: url('img/scooter_icon.webp');
+  background-image: url('img/marker_karte.svg');
   background-size: cover;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 0%;
   cursor: pointer;
 }
