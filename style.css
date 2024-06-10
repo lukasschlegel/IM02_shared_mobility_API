@@ -541,4 +541,10 @@ line-height: normal;
 
 .applink {
   color: #09E85E;
-  fon
+  font-size: small;
+}
+
+.describtion {
+  color: black;
+  font-size: large;
+}
