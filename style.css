@@ -118,7 +118,7 @@ p {
 .header-Bild {
   position: absolute;
   height: 100%;
-  object-fit: cover;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -150,6 +150,9 @@ p {
   }
 
   .logo {
+      max-width: 200px;
+      margin-bottom: 50px;
+        padding-top: 40px;
       max-width: 200px;
       margin-bottom: 50px;
   }
@@ -228,6 +231,9 @@ p {
   .logo {
       max-width: 120px;
       margin-bottom: 30px;
+      padding-top: 40px;
+      max-width: 200px;
+      margin-bottom: 50px;
   }
 
   .overlay-content {
@@ -535,11 +541,4 @@ line-height: normal;
 
 .applink {
   color: #09E85E;
-  font-size: small;
-}
-
-.describtion {
-  color: black;
-  font-size: large;
-}
-
+  fon
