@@ -98,6 +98,8 @@ function drawMap(pointArray) {
   zoom: 14.2, // starting zoom
   });
 
+  
+
   const geojson = {
       type: 'FeatureCollection',
       features: pointArray
