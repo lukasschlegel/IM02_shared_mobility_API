@@ -108,6 +108,6 @@ const geocoder = new MapboxGeocoder({
 }).on('result', (selected) => {
   console.log(selected)
     });
-
+    
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 }
