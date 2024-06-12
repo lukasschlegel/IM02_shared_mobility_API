@@ -503,24 +503,6 @@ line-height: normal;
 }
 }
 
-/* .geocoder-placeholder-text {
-  color: white;
-  font-family: Industry;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-} */
-/* 
-.geocoder-close-button {
-  color: white;
-  font-family: Industry;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-} */
-
 .mapboxgl-popup {
   max-width: 10%;
 }
