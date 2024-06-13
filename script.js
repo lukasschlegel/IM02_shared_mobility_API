@@ -24,7 +24,10 @@ function datenInArray(data) {
             title: 'Mapbox',
             description: `<strong>Scooter</strong> <br> 
                           ${scooter.attributes.station_name} <br>
-                          <strong> <a class="applink" href="https://apps.apple.com/us/app/tier-move-better/id1436140272?mt=8">App Store</a> | <a class="applink" href="https://play.google.com/store/apps/details?id=io.voiapp.voi&hl=en&gl=US">Google Play</a></strong>`
+                          <strong>
+                            <a class="applink" target="_blank" href="${scooter.attributes.provider_apps_ios_store_uri}">App Store</a> | 
+                            <a class="applink" target="_blank" href="${scooter.attributes.provider_apps_android_store_uri}">Google Play</a>
+                          </strong>`
           }
       }
       scooterArray.push(scooterObj);
@@ -33,10 +36,14 @@ function datenInArray(data) {
 }
 
 async function init() {
-  let ScooterDaten = await holeScooterDaten('https://api.sharedmobility.ch/v1/sharedmobility/identify?filters=ch.bfe.sharedmobility.vehicle_type=E-Scooter&Geometry=8.536919584914061,47.38059039878863&Tolerance=1000&offset=0&gemetryFormat=esrijson');
+  initMap();
+}
+
+async function initMap(lat = 8.536919584914061, long = 47.38059039878863) {
+  let ScooterDaten = await holeScooterDaten(`https://api.sharedmobility.ch/v1/sharedmobility/identify?filters=ch.bfe.sharedmobility.vehicle_type=E-Scooter&Geometry=${lat},${long}&Tolerance=1000&offset=0&gemetryFormat=esrijson`);
   console.log(ScooterDaten);
   let mapBoxArray = datenInArray(ScooterDaten);
-  drawMap(mapBoxArray)
+  drawMap(mapBoxArray, lat, long)
 }
 init();
 
@@ -47,13 +54,13 @@ init();
 //     datenDarstellen(scooter_aus_suche)
 // })
 
-function drawMap(pointArray) {
+function drawMap(pointArray, lat = 8.538, long = 47.38) {
   mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
   const map = new mapboxgl.Map({
   container: 'map',
   countries: 'ch',
   style: 'mapbox://styles/mapbox/light-v11',
-  center: [8.538, 47.38],
+  center: [lat, long],
   zoom: 14.2,
   });
   
@@ -110,7 +117,9 @@ const geocoder = new MapboxGeocoder({
 
 }).on('result', (selected) => {
   console.log(selected)
-    })   
+
+  initMap(selected.result.center[0], selected.result.center[1]);
+})   
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 }

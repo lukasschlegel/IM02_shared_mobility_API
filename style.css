@@ -468,8 +468,9 @@ a {
   }
 
 .geocoder-dropdown-icon {
-  margin-right: 10px;
-  justify-content: left;
+  display: none;
+  /* margin-right: 10px;
+  justify-content: left; */
 }
 
 .geocoder-dropdown-text {
@@ -479,6 +480,12 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+}
+button.mapboxgl-ctrl-geocoder--button {
+  background: transparent;
+}
+.mapboxgl-ctrl-geocoder--icon path {
+  fill: white;
 }
 
 .geocoder {
