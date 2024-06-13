@@ -92,9 +92,12 @@ function drawMap(pointArray) {
 const geocoder = new MapboxGeocoder({
   accessToken: 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA',
   mapboxgl: 0,
+  countries: 'CH',
+  lanugage: 'de',
+  bbox: [6.02260949059, 45.7769477403, 10.4427014502, 47.8308275417],
   placeholder: 'Suche nach einer Adresse',
   marker: false,
-  types: 'poi',
+  feature_type: 'place' + 'address',
         render: function (item) {
             const maki = item.properties.maki || 'marker';
             return `<div class='geocoder-dropdown-item'>
