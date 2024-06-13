@@ -45,14 +45,9 @@ async function initMap(lat = 8.536919584914061, long = 47.38059039878863) {
   let mapBoxArray = datenInArray(ScooterDaten);
   drawMap(mapBoxArray, lat, long)
 }
-init();
+initMap();
 
-// geocoder.addEventListener('input', async function() {
-//     let ergebnis = input.value;
-//     let searchUrl = 'https://api.sharedmobility.ch/v1/sharedmobility/find?searchText=' + ergebnis + '&offset=0&geometryFormat=esrijson&Geometry=8.536919584914061,47.38059039878863&Tolerance=1000';
-//     let scooter_aus_suche = await holeScooterDaten(searchUrl);
-//     datenDarstellen(scooter_aus_suche)
-// })
+let geocoder; 
 
 function drawMap(pointArray, lat = 8.538, long = 47.38) {
   mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXNzY2hsZWdlbCIsImEiOiJjbHc2Y2J3YngxcXRiMmxweWIwM3V3eWg0In0.grSxvL6hdG7c-8UeuDq2rA';
@@ -114,12 +109,12 @@ const geocoder = new MapboxGeocoder({
                     </div>`;
         },
 
+})
 
-}).on('result', (selected) => {
-  console.log(selected)
-
-  initMap(selected.result.center[0], selected.result.center[1]);
-})   
+  geocoder.on('result', (selected) => {
+    initMap(selected.result.center[0], selected.result.center[1]);
+  })  
+  
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 }
