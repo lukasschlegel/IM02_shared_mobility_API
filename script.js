@@ -110,7 +110,33 @@ const geocoder = new MapboxGeocoder({
 
 }).on('result', (selected) => {
   console.log(selected)
-    });
-    
-document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+    })   
+
 }
+
+
+  // Hier findet es den marker nicht? Es steht undefined in Konsole. Noch abklären.
+  marker.addEventListener('click', () => {
+    console.log('Marker clicked:', feature.properties);
+    // Implement additional logic here, such as fetching route data
+    fetchRoute(feature.geometry.coordinates).then(function(route) {
+      if (map.getLayer('route')) {
+        map.removeLayer('route');
+        map.removeSource('route');
+      }
+      map.addLayer({
+        id: 'route',
+        type: 'line',
+        source: {
+          type: 'geojson',
+          data: route
+        },
+        paint: {
+          'line-color': '#09E85E',
+          'line-width': 8
+        }
+      });
+    });
+  });
+
+  document.getElementById('geocoder').appendChild(geocoder.onAdd(map));

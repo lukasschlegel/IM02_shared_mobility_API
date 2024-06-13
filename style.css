@@ -461,7 +461,6 @@ a {
 }
 
 #map {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 500px;
@@ -470,6 +469,7 @@ a {
 
 .geocoder-dropdown-icon {
   margin-right: 10px;
+  justify-content: left;
 }
 
 .geocoder-dropdown-text {
@@ -490,16 +490,16 @@ line-height: normal;
   min-width: 60%;
   margin: 0 auto;
   background-color: #09E85E;
-  padding: 0px 40px; /* Vertikaler und horizontaler Innenabstand */
-  border: none; /* Kein Rand */
-  color: white; /* Weiße Textfarbe */
-  font-size: 20px; /* Größere Schriftgröße für bessere Lesbarkeit */
-  text-align: left; /* Text im Input zentrieren */
-  font-family: "industry", sans-serif; /* Schriftart */
-  font-weight: 400; /* Schriftgewicht */
-  outline: none; /* Entfernt den Fokus-Rand, den einige Browser anzeigen */
-  margin: 4px auto; /* Vertikaler Abstand und horizontale Zentrierung */
-  display: block; /* Ermöglicht margin auto für Zentrierung */
+  padding: 0px 40px; 
+  border: none; 
+  color: white;
+  font-size: 20px; 
+  text-align: left;
+  font-family: "industry", sans-serif;
+  font-weight: 400;
+  outline: none;
+  margin: 4px auto; 
+  display: block;
 }
 }
 
