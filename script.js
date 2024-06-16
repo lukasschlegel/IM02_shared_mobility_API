@@ -115,7 +115,6 @@ const geocoder = new MapboxGeocoder({
     initMap(selected.result.center[0], selected.result.center[1]);
   })  
   
-
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 }
 
