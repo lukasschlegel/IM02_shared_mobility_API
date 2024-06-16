@@ -43,6 +43,13 @@ h3 {
   margin-bottom: 0;
 }
 
+
+h4 {
+  color: black;
+  font-size: small;
+  margin: 0;
+}
+
 p {
   font-size: 1.4rem;
   line-height: 2rem;
@@ -533,4 +540,5 @@ button.mapboxgl-ctrl-geocoder--button {
 .describtion {
   color: black;
   font-size: large;
+  margin-bottom: 0;
 }
