@@ -542,3 +542,11 @@ button.mapboxgl-ctrl-geocoder--button {
   font-size: large;
   margin-bottom: 0;
 }
+
+.mapboxgl-popup-content {
+position: relative;
+}
+
+.p.describtion {
+position: relative;
+}
