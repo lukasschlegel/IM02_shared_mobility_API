@@ -541,6 +541,7 @@ button.mapboxgl-ctrl-geocoder--button {
   color: black;
   font-size: large;
   margin-bottom: 0;
+  word-break: break-all;
 }
 
 .mapboxgl-popup-content {
