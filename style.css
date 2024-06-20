@@ -518,6 +518,7 @@ button.mapboxgl-ctrl-geocoder--button {
 }
 
 .mapboxgl-popup {
+  display: flex;
   max-width: 10%;
 }
 
