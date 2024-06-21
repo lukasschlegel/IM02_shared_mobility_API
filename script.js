@@ -26,7 +26,7 @@ function datenInArray(data) {
                           <br>
                           <strong>(${scooter.attributes.provider_name})</strong> <br> 
                           ${scooter.attributes.station_name} <br>
-                          <h4>Mehr infos hier:</h4>
+                          <h4>Zum Anbieter:</h4>
                           <strong>
                             <a class="applink" target="_blank" href="${scooter.attributes.provider_apps_ios_store_uri}">App Store</a> | 
                             <a class="applink" target="_blank" href="${scooter.attributes.provider_apps_android_store_uri}">Google Play</a>
