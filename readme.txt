@@ -1,4 +1,4 @@
-# Shared Mobility API Projekt von Tonia Moser, Ella Ricci und Lukas Schlegel
+#A Shared Mobility API Projekt von Tonia Moser, Ella Ricci und Lukas Schlegel
 
 ## Kurzbeschreibung des Projekts
 Für unsere Projektarbeit haben wir eine Website entworfen und entwickelt, die es Nutzern ermöglicht, verfügbare E-Scooter in ihrer Umgebung zu suchen und zu finden. Die Seite ist benutzerfreundlich gestaltet und bietet eine interaktive Karte zur Anzeige der Scooter-Standorte. Mithilfe von JavaScript haben wir die API von Shared Mobility integriert, um Echtzeitdaten der Scooter bereitzustellen. Dadurch können Nutzer die nächstgelegenen Scooter finden, deren Verfügbarkeit überprüfen und direkt nutzen. Dieses Shared Mobility API Projekt wurde von Tonia Moser, Lukas Schlegel und Ella Ricci entwickelt.
